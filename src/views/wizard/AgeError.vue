@@ -1,5 +1,5 @@
 <template>
-  <WizardAgeError/>
+  <WizardAgeError />
 </template>
 <script>
 export default {

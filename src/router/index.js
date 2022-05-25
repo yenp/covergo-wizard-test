@@ -23,11 +23,10 @@ const routers = [
           next({ name: "not-found" });
         },
         meta: { title: "Wizard - Page" },
-      }
-    ]
+      },
+    ],
   },
-  
-  
+
   {
     path: "/:pathMatch(.*)*",
     name: "not-found",

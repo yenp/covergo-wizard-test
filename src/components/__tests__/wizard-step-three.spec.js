@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { shallowMount } from "@vue/test-utils";
 import StepThree from "@/components/wizard/StepThree.vue";
 import { createStore } from "vuex";
-import dataWizard from './mock.json';
+import dataWizard from "./mock.json";
 describe("StepThree", () => {
   const mockStore = createStore({
     modules: {
@@ -14,7 +14,7 @@ describe("StepThree", () => {
 
   let mixins = {
     methods: {
-      moveStep(step) {
+      moveStep() {
         vi.fn();
       },
     },
@@ -23,12 +23,12 @@ describe("StepThree", () => {
   let wrapper = shallowMount(StepThree, {
     mixins: [mixins],
     global: {
-      plugins: [mockStore]
-    }
+      plugins: [mockStore],
+    },
   });
 
   wrapper.setData({
-    dataWizard
+    dataWizard,
   });
 
   it("Display Header Text", () => {
@@ -44,7 +44,9 @@ describe("StepThree", () => {
   });
 
   it("Display Where do you live Text", () => {
-    expect(wrapper.find(".liveText").text()).toEqual("Where do you live: Hong Kong");
+    expect(wrapper.find(".liveText").text()).toEqual(
+      "Where do you live: Hong Kong"
+    );
   });
 
   it("Display Package Text", () => {
@@ -54,5 +56,4 @@ describe("StepThree", () => {
   it("Display Premium Text", () => {
     expect(wrapper.find(".premiumText").text()).toEqual("Premium: 500HKD");
   });
-
 });

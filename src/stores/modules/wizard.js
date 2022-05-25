@@ -1,18 +1,18 @@
 const state = {
-  dataWizardState:null
+  dataWizardState: null,
 };
 
 const getters = {
-  dataWizard: (state) => state.dataWizardState
+  dataWizard: (state) => state.dataWizardState,
 };
 
 const actions = {
-  SetDataWizard({commit}, data) {
-    commit("setDataWizard",data);
+  SetDataWizard({ commit }, data) {
+    commit("setDataWizard", data);
   },
-  RemoveDataWizard({commit}) {
+  RemoveDataWizard({ commit }) {
     commit("removeDataWizard");
-  }
+  },
 };
 
 const mutations = {
@@ -21,7 +21,7 @@ const mutations = {
   },
   removeDataWizard(state) {
     state.dataWizardState = null;
-  }
+  },
 };
 
 export default {
@@ -29,5 +29,5 @@ export default {
   state,
   getters,
   actions,
-  mutations
+  mutations,
 };

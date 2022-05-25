@@ -1,13 +1,12 @@
-import { createStore } from 'vuex'
-import VuexPersistence from 'vuex-persist'
-import Crypto from 'crypto-js';
-import Cookie from 'js-cookie';
-import { v4 as uuidv4 } from 'uuid';
+import { createStore } from "vuex";
+import VuexPersistence from "vuex-persist";
+import Crypto from "crypto-js";
+import Cookie from "js-cookie";
+import { v4 as uuidv4 } from "uuid";
 import wizard from "./modules/wizard";
 
-
 // Store the encryption token in a secure cookie.
-const storageKey = 'c#^ewqihewjkqhkjehwjqkhekq';
+const storageKey = "c#^ewqihewjkqhkjehwjqkhekq";
 const encryptionToken = Cookie.get(storageKey) || uuidv4();
 Cookie.set(storageKey, encryptionToken, { secure: true, expires: 180 });
 
@@ -40,10 +39,10 @@ const vuexLocal = new VuexPersistence({
 
 const store = createStore({
   modules: {
-    wizard
+    wizard,
   },
   plugins: [vuexLocal.plugin],
-  strict: true
-})
+  strict: true,
+});
 
 export default store;
