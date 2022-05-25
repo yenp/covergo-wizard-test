@@ -1,0 +1,9 @@
+{
+  "name": "Alex",
+  "age": 50,
+  "countryName": "Hong Kong",
+  "countryObject": { "name": "Hong Kong", "currency": "HKD", "rate": 1 },
+  "packageType": "Standard",
+  "packageObject": { "type": "Standard", "percent": 1 },
+  "premium": 500
+}
