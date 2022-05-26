@@ -9,3 +9,18 @@ Vuex is a state management pattern + library for Vue.js applications. It serves 
 # CSS framework
 
 Tailwind css - https://tailwindcss.com/
+
+# Approach
+
+Manage the data on a state and keep live all steps. When the user click on Buy button to submit data successfully then data state will be clear.
+
+# Unit test
+
+Use https://vitest.dev/ to do unit test on one by one component to check test and test premium calculate function.
+
+# Feedback Input
+
+Page 2 - age error
+If user clicks on the button, he will be redirected to the Page 1
+
+This point we should bring user back to second screen let them review and update their current data. If we bring them back to first screen they need to do from beginning that is not good UX for wizard feature.
